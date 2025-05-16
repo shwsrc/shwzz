@@ -1,7 +1,7 @@
 // Discord User IDs to display in the cards
 export const DISCORD_USER_IDS = [
-  "388293380926472192",
-  "722665614493351987"
+  "722665614493351987",
+  "388293380926472192" 
 ];
 
 // Replace this with the relative path to your local music file
