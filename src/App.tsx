@@ -5,12 +5,16 @@ import RevealButton from './components/RevealButton';
 import LoadingIndicator from './components/LoadingIndicator';
 import { DISCORD_USER_IDS } from './utils/constants';
 import { LanyardResponse } from './types/lanyard';
+import useBlockCopy from './hooks/useBlockCopy'; // Importa o hook useBlockCopy
 
 function App() {
   const [isRevealed, setIsRevealed] = useState(false);
   const [lanyardData, setLanyardData] = useState<LanyardResponse[]>([]);
   const [isLoading, setIsLoading] = useState(true);
   const [errors, setErrors] = useState<Map<string, string>>(new Map());
+
+  // Chama o hook useBlockCopy para bloquear ações de copiar conteúdo
+  useBlockCopy(); 
 
   useEffect(() => {
     if (!isRevealed) return;
@@ -90,4 +94,4 @@ function App() {
   );
 }
 
-export default App
+export default App;
