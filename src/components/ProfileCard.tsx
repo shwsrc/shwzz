@@ -1,5 +1,5 @@
 import React from 'react';
-import { Music, Gamepad2, Clock, Instagram } from 'lucide-react'; // Importando o ícone do Instagram
+import { Music, Gamepad2, Clock } from 'lucide-react';
 import { LanyardData } from '../types/lanyard';
 
 interface ProfileCardProps {
@@ -8,8 +8,8 @@ interface ProfileCardProps {
 }
 
 const ProfileCard: React.FC<ProfileCardProps> = ({ data, isAnimating }) => {
-  const { discord_user, activities, discord_status, listening_to_spotify } = data; 
-
+  const { discord_user, activities, discord_status, listening_to_spotify } = data;
+  
   // Url do avatar
   const avatarUrl = discord_user.avatar 
     ? `https://cdn.discordapp.com/avatars/${discord_user.id}/${discord_user.avatar}.${discord_user.avatar.startsWith('a_') ? 'gif' : 'png'}` 
@@ -36,11 +36,6 @@ const ProfileCard: React.FC<ProfileCardProps> = ({ data, isAnimating }) => {
     if (currentActivity?.application_id) return <Gamepad2 size={20} />;
     return <Clock size={20} />;
   };
-
-  // Links específicos do Instagram
-  const instagramUrl = discord_user.username === 'noitevivida' 
-    ? 'https://www.instagram.com/noitevivida' 
-    : 'https://www.instagram.com/repnsem';
 
   return (
     <div 
@@ -105,20 +100,6 @@ const ProfileCard: React.FC<ProfileCardProps> = ({ data, isAnimating }) => {
           </div>
         )}
       </div>
-      
-      {/* Ícone de Instagram */}
-      {instagramUrl && ( // Só exibe o ícone se instagramUrl existir
-        <div className="p-4 flex justify-center mt-4">
-          <a 
-            href={instagramUrl} 
-            target="_blank" 
-            rel="noopener noreferrer"
-            className="flex items-center justify-center w-10 h-10 rounded-full bg-transparent border-2 border-white hover:border-black-600 transition-colors"
-          >
-            <Instagram size={24} className="text-white hover:text-black-600" />
-          </a>
-        </div>
-      )}
     </div>
   );
 };
