@@ -5,10 +5,10 @@ export const DISCORD_USER_IDS = [
 ];
 
 // Replace this with the relative path to your local music file
-export const BACKGROUND_MUSIC_URL = "./imag/bc.mp3";
+export const BACKGROUND_MUSIC_URL = "/imag/bc.mp3";
 
 // Background image local path
-export const BACKGROUND_IMAGE_URL = "./imag/bc.jpeg";
+export const BACKGROUND_IMAGE_URL = "/imag/bc.jpeg";
 
 // Customize the appearance
 export const THEME = {
