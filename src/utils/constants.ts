@@ -8,7 +8,7 @@ export const DISCORD_USER_IDS = [
 export const BACKGROUND_MUSIC_URL = "https://shwty.shop/bc.mp3";
 
 // Background image local path
-export const BACKGROUND_IMAGE_URL = "https://shwty.shop/bc.jpeg";
+export const BACKGROUND_IMAGE_URL = "https://shwty.shop/bc.jpg";
 
 // Customize the appearance
 export const THEME = {
