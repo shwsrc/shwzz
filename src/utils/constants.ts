@@ -5,10 +5,10 @@ export const DISCORD_USER_IDS = [
 ];
 
 // Replace this with the relative path to your local music file
-export const BACKGROUND_MUSIC_URL = "https://shwty.shop/bc.mp3";
+export const BACKGROUND_MUSIC_URL = "https://files.catbox.moe/n8tmgu.mp3";
 
 // Background image local path
-export const BACKGROUND_IMAGE_URL = "https://shwty.shop/bc.jpg";
+export const BACKGROUND_IMAGE_URL = "https://i.imgur.com/dgVx14x.jpeg";
 
 // Customize the appearance
 export const THEME = {
